@@ -99,7 +99,7 @@ class SendGrid
         $mail = new \SendGrid\Mail($from, $this->getSubject(), $first, $content);
 
         if ($this->getReplyTo()) {
-            $mail->setReplyTo(["email" => $this->getReplyTo()]);
+            $mail->setReplyTo($this->getReplyTo());
         }
 
         $i = 0;
